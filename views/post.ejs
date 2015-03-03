@@ -1,0 +1,18 @@
+<%- include header %>
+  <script type="text/javascript" src="/plugins/ueditor/ueditor.config.js"></script>
+      <script type="text/javascript" src="/plugins/ueditor/ueditor.all.js"></script>
+      <link type="text/css" href="/plugins/ueditor/themes/default/css/ueditor.css"/>
+      <script type="text/javascript" charset="utf-8">
+          var editor = new baidu.editor.ui.Editor();
+          editor.render('editor');  //editor为编辑器容器的id
+      </script>
+<form method="post">
+  标题：<br />
+  <input type="text" name="title" /><br />
+  标签：<br />
+  <input type="text" name="tag1" /><input type="text" name="tag2" /><input type="text" name="tag3" /><br />
+  正文：<br />
+  <textarea name="post" rows="20" cols="100" id="editor"></textarea><br />
+  <input type="submit" value="发表" />
+</form>
+<%- include footer %>
